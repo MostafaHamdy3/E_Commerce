@@ -23,6 +23,26 @@ A modern, feature-rich e-commerce mobile application built with React Native and
 - **HTTP Client**: Axios
 - **Storage**: AsyncStorage
 
+### 🤔 Technology Selection & Reasoning
+
+#### **TypeScript**
+- Catch errors at compile-time rather than runtime, improving code reliability
+
+#### **Zustand**
+- Minimal boilerplate compared to Redux, reducing bundle size and complexity
+- Efficient re-renders with fine-grained subscriptions
+- Eliminates provider hell and simplifies component tree
+
+#### **Axios**
+- Easy to implement global error handling and authentication
+- Clean async/await syntax for better code readability
+- Built-in JSON parsing and stringification
+
+#### **AsyncStorage**
+- Easy-to-use key-value storage system
+- Built into React Native, no additional setup required
+- Non-blocking operations that don't affect UI performance
+
 ## 📱 Screenshots
 
 <div align="center">
