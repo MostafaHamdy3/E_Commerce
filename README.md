@@ -90,7 +90,14 @@ app/
 
 ## 📱 Screenshots
 
-<!-- Add screenshots of your app here -->
+<div align="center">
+
+### App Interface
+<img src="app/assets/screenshots/Screenshot1.png" width="250" alt="Products Screen"/>
+<img src="app/assets/screenshots/Screenshot2.png" width="250" alt="Product Details Screen"/>
+<img src="app/assets/screenshots/Screenshot3.png" width="250" alt="Shopping Cart Screen"/>
+
+</div>
 
 ## 🔧 Configuration
 

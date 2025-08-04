@@ -5,6 +5,7 @@ const API = axios.create({ baseURL: 'https://api.escuelajs.co/api/v1' });
 export const fetchProducts = async () => {
   try {
     const response = await API.get('/products');
+    console.log(response.data.length);
     return response.data;
   } catch (error) {
     console.error('Error fetching products:', error);

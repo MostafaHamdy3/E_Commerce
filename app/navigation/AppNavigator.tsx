@@ -6,13 +6,30 @@ import { RootStackParamList } from '../types/navigation';
 import Products from '../screens/Products';
 import ProductDetail from '../screens/ProductDetails';
 import CartScreen from '../screens/Cart';
+import { useTheme } from '../hooks/useTheme';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => {
+  const { colors } = useTheme();
+
+  const screenOptions = {
+    headerStyle: {
+      backgroundColor: colors.bgContainer,
+    },
+    headerTintColor: colors.textColor,
+    headerTitleStyle: {
+      fontWeight: 'bold' as 'bold',
+      color: colors.textColor,
+    },
+  };
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Products">
+      <Stack.Navigator 
+        initialRouteName="Products"
+        screenOptions={screenOptions}
+      >
         <Stack.Screen 
           name="Products"
           component={Products}

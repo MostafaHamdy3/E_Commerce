@@ -1,14 +1,17 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+
 import { useCartStore } from '../store/CartStore';
-import { colors } from '../utils/Constants';
+import { useTheme } from '../hooks/useTheme';
+import { ThemeColors } from '../utils/Constants';
 import { NavigationProp } from '../types/navigation';
 
 const CartButton = () => {
   const navigation = useNavigation<NavigationProp>();
-
   const { getCartCount } = useCartStore();
+  const { colors } = useTheme();
+  const styles = getStyles(colors);
 
   const navToCart = () => {
     navigation.navigate('Cart');
@@ -27,7 +30,7 @@ const CartButton = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const getStyles = (colors: ThemeColors) => StyleSheet.create({
   cartIcon: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -47,11 +50,12 @@ const styles = StyleSheet.create({
   },
   cartCount: {
     fontSize: 12,
-    color: colors.bgContainer,
+    color: colors.textColor,
   },
   cartIconImage: {
     width: 24,
     height: 24,
+    tintColor: colors.textColor,
   },
 });
 
