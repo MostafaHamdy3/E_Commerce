@@ -7,7 +7,8 @@ A modern, feature-rich e-commerce mobile application built with React Native and
 - **Product Catalog**: Browse a comprehensive list of products with category filtering
 - **Product Details**: View detailed information about each product including images and descriptions
 - **Shopping Cart**: Add, remove, and manage items in your cart with quantity controls
-- **Persistent Storage**: Cart data is saved locally using AsyncStorage for a seamless user experience
+- **Light/Dark Mode**: Toggle between light and dark themes with persistent storage
+- **Persistent Storage**: Cart data and theme preferences are saved locally using AsyncStorage for a seamless user experience
 - **Real-time Updates**: Cart badge updates in real-time as items are added or removed
 - **Responsive Design**: Optimized for both iOS and Android platforms
 - **Category Filtering**: Filter products by categories for easier browsing
@@ -21,6 +22,17 @@ A modern, feature-rich e-commerce mobile application built with React Native and
 - **Navigation**: React Navigation v7
 - **HTTP Client**: Axios
 - **Storage**: AsyncStorage
+
+## 📱 Screenshots
+
+<div align="center">
+
+### App Interface
+<img src="app/assets/screenshots/Screenshot1.png" width="250" alt="Products Screen"/>
+<img src="app/assets/screenshots/Screenshot2.png" width="250" alt="Product Details Screen"/>
+<img src="app/assets/screenshots/Screenshot3.png" width="250" alt="Shopping Cart Screen"/>
+
+</div>
 
 ## 📋 Prerequisites
 
@@ -79,25 +91,14 @@ npm run ios
 app/
 ├── assets/              # Static assets (images, icons)
 ├── components/          # Reusable UI components
-├── hooks/              # Custom React hooks
-├── navigation/         # Navigation configuration
-├── screens/            # Screen components
-├── services/           # API services and external integrations
-├── store/              # State management (Zustand stores)
-├── types/              # TypeScript type definitions
-└── utils/              # Utility functions and constants
+├── hooks/               # Custom React hooks
+├── navigation/          # Navigation configuration
+├── screens/             # Screen components
+├── services/            # API services and external integrations
+├── store/               # State management (Zustand stores)
+├── types/               # TypeScript type definitions
+└── utils/               # Utility functions and constants
 ```
-
-## 📱 Screenshots
-
-<div align="center">
-
-### App Interface
-<img src="app/assets/screenshots/Screenshot1.png" width="250" alt="Products Screen"/>
-<img src="app/assets/screenshots/Screenshot2.png" width="250" alt="Product Details Screen"/>
-<img src="app/assets/screenshots/Screenshot3.png" width="250" alt="Shopping Cart Screen"/>
-
-</div>
 
 ## 🔧 Configuration
 
@@ -106,21 +107,11 @@ The app uses the following external API:
 
 To use a different API, update the base URL in `app/services/api.ts`.
 
-## 🌟 Key Components
-
-- **Products Screen**: Main product listing with category filtering
-- **Product Details Screen**: Detailed view of individual products
-- **Cart Screen**: Shopping cart management
-- **Cart Store**: Global state management for cart functionality
-- **Navigation**: Stack-based navigation between screens
-
 ## 🔄 State Management
 
 The app uses Zustand for state management, specifically for:
-- Cart items management
-- Product quantity tracking
-- Persistent storage integration
-- Real-time cart updates
+- **Cart Management**: Cart items and quantity tracking
+- **Theme Management**: Light/dark mode preferences and color schemes
 
 ## 🚀 Performance Features
 
